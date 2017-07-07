@@ -1,4 +1,12 @@
+html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
 body {
-    font-size: 1em;
-    color: #333;
+    background-color: #d3d3d3;
+    background-image: url('../images/vintage-wood-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
 }

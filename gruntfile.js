@@ -6,13 +6,14 @@ module.exports = function(grunt) {
             src: "grunt/**/*"
         },
         app: 'public',
-        resources: 'resources'
+        resources: 'resources',
+        browserSyncHtmlSrc: 'public/**/*.html'
     };
 
     var configs = require('load-grunt-configs')(grunt, options);
 
 	grunt.initConfig(configs);
 
-    grunt.registerTask('build', ['browserify:dist', 'sass', 'includereplace']);
-    grunt.registerTask('default', ['build', 'watch']);
+    grunt.registerTask('build', ['browserify:dist', 'imagemin', 'sass', 'includereplace']);
+    grunt.registerTask('default', ['build', 'browserSync' , 'watch']);
 };
