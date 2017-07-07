@@ -23,5 +23,13 @@ module.exports = {
 		tasks: [
 			"browserify:dist"
 		]
+	},
+	img: {
+		files: [
+			"<%= resources %>/images/**/*.{png,jpg,jpeg,gif}"
+		],
+		tasks: [
+			"newer:imagemin"
+		]
 	}
 };

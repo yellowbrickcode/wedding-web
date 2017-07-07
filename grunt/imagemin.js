@@ -7,7 +7,7 @@ module.exports = {
 		expand: true,
 		cwd: "<%= resources %>",
 		src: [
-			"**/*.{png,jpg,gif}"
+			"**/*.{png,jpg,jpeg,gif}"
 		],
 		dest: "<%= app %>/"
 	}
