@@ -1,17 +1,18 @@
 module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
+
 	var options = {
         config: {
             src: "grunt/**/*"
         },
-        app: 'public'
+        app: 'public',
+        resources: 'resources'
     };
 
     var configs = require('load-grunt-configs')(grunt, options);
 
-    grunt.initConfig(configs);
+	grunt.initConfig(configs);
 
-    grunt.loadNpmTasks('grunt-include-replace');
-
-    grunt.registerTask('build', ['includereplace']);
-    grunt.registerTask('default', ['build']);
+    grunt.registerTask('build', ['browserify:dist', 'sass', 'includereplace']);
+    grunt.registerTask('default', ['build', 'watch']);
 };
