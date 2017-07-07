@@ -23,7 +23,17 @@ h1, h2, h3, h4, h5 {
 }
 
 img {
+    border-radius: 4px;
     max-width: 100%;
+}
+
+a {
+    color: $color-primary-accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 
