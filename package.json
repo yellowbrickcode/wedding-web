@@ -22,6 +22,7 @@
   "homepage": "https://github.com/yellowbrickcode/wedding-web#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-include-replace": "^5.0.0",
     "load-grunt-configs": "^1.0.0"
   }
 }

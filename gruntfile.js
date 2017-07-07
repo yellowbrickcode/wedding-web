@@ -10,6 +10,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig(configs);
 
-    grunt.registerTask('build', []);
+    grunt.loadNpmTasks('grunt-include-replace');
+
+    grunt.registerTask('build', ['includereplace']);
     grunt.registerTask('default', ['build']);
 };
