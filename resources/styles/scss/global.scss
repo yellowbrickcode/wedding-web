@@ -2,6 +2,7 @@
 @import "fonts";
 @import "bootstrap-custom";
 @import "nav";
+@import "header";
 
 
 html {
@@ -11,4 +12,9 @@ html {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Indie Flower', cursive;
+}
+
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
 }

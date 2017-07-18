@@ -1,7 +1,8 @@
 .navbar-default {
     background-color: $color-background;
     border: none;
-    
+    margin-bottom: 0;
+
     & a {
         color: $color-font !important;
         font-family: 'Indie Flower', cursive;
