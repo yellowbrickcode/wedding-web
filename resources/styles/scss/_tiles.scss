@@ -1,0 +1,10 @@
+.tiles {
+    &__horizontal {
+        margin-top: 5em;
+    }
+
+    a {
+        @extend .hvr-grow-rotate;
+        cursor: pointer;
+    }
+}

@@ -1,9 +1,10 @@
 @import "vars";
 @import "fonts";
 @import "bootstrap-custom";
+@import "animations";
 @import "nav";
 @import "header";
-
+@import "tiles";
 
 html {
     color: $color-font;
@@ -21,4 +22,14 @@ h1, h2, h3, h4, h5 {
 .img-center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.spacer {
+    &__bottom-1 {
+        margin-bottom: 1em;
+    }
+
+    &__bottom-2 {
+        margin-bottom: 2em;
+    }
 }
