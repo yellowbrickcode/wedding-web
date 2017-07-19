@@ -3,6 +3,14 @@
     border: none;
     margin-bottom: 0;
 
+    & .navbar-toggle {
+        border: 0;
+        
+        & .icon-bar {
+            background-color: $color-primary;
+        }
+    }
+
     & a {
         color: $color-font !important;
         font-family: 'Indie Flower', cursive;
