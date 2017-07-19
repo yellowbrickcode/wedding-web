@@ -16,6 +16,10 @@
         font-family: 'Indie Flower', cursive;
         font-size: 1.1em;
 
+        &.active {
+            color: $color-primary-accent !important;
+        }
+
         &:hover {
             transition: color 0.5s ease;
             color: $color-primary-accent !important;
