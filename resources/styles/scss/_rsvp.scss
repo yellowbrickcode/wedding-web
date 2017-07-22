@@ -32,6 +32,13 @@
     }
 }
 
+.rsvp-accommodation {
+    input[type=checkbox] {
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
+
 .card {
     background-color: white;
     border: 1px solid $color-primary;

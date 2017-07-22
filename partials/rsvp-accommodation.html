@@ -1,0 +1,29 @@
+<div class="col-md-12 rsvp-accommodation">
+    <h4>Accommodation</h4>
+    <p>
+        For more information about staying at Caer Llan (price, check in and out time, what's included etc), see the 
+        <a href="accommodation.html" target="_blank">accommodation</a> page.
+    </p>
+    <div class="row spacer__bottom-2">
+        <div class="col-xs-12 spacer__bottom-1">
+            <label for="rsvpAccommodation" class="col-md-5 col-xs-10">Would you like to stay at Caer Llan?</label>
+            <input data-bind="checked: rsvp.wantsAccommodation" id="rsvpAccommodation" type="checkbox" />
+        </div>
+        <!-- ko if: rsvp.wantsAccommodation -->
+        <div class="col-xs-12 spacer__bottom-2">
+            <label for="shareOptions" class="col-xs-12">
+                Are there any other guests that you know are invited that you wouldn't mind sharing a room with if we 
+                start to run out of rooms?
+            </label>
+            <textarea data-bind="textInput: rsvp.shareNotes" id="shareOptions" class="col-xs-12 form-control" 
+                placeholder="Remember, it's fine if there's nobody. We just need to know either way :)"></textarea>
+        </div>
+        <p>
+            As mentioned on the <a href="accommodation.html" target="_blank">accommodation</a> page, if you are staying with us 
+            at Caer Llan we ask that you settle the balance for your room before the start of November. Payment details will be 
+            sent out when we confirm your room. We will aim to confirm rooms ASAP so if we end up running out of rooms, you will have 
+            plenty of time to book elsewhere.
+        </p>
+        <!-- /ko -->
+    </div>
+</div>

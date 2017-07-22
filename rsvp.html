@@ -21,6 +21,7 @@
                     <input data-bind="value: rsvp.leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
                 </div>
                 @@include('guests.html')
+                @@include('rsvp-accommodation.html')
                 <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
                 <!-- /ko --> <!-- end if: rsvp.type() == 'day' -->
 

@@ -6,6 +6,8 @@ module.exports = function() {
 
     this.type = ko.observable("");
     this.leadGuestEmail = ko.observable("");
+    this.wantsAccommodation = ko.observable(false);
+    this.shareNotes = ko.observable("");
 
     this.guests = ko.observableArray();
     this.guests.push(new Guest());
