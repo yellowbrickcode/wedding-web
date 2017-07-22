@@ -1,5 +1,5 @@
 <div class="col-xs-12 guests spacer__bottom-2">
-    <!-- ko foreach: guests -->
+    <!-- ko foreach: rsvp.guests -->
     <div class="card">
         <i class="remove-card" data-bind="click: $root.removeGuest">x</i>
         <h4 data-bind="text: 'Guest ' + ($index() + 1)"></h4>

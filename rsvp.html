@@ -14,20 +14,20 @@
                     <button class="btn btn-default" id="evening" data-bind="click: setRsvpType">No</button>
                 </p>
 
-                <!-- ko if: rsvpType() === 'day' -->
+                <!-- ko if: rsvp.type() === 'day' -->
                 <p>Please fill in the details on behalf of your whole party.</p>
                 <label for="leadGuestEmail" class="col-md-12">Contact email address</label>
                 <div class="col-md-12">
-                    <input data-bind="value: leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
+                    <input data-bind="value: rsvp.leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
                 </div>
                 @@include('guests.html')
                 <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
-                <!-- /ko --> <!-- end if: rsvpType() == 'day' -->
+                <!-- /ko --> <!-- end if: rsvp.type() == 'day' -->
 
-                <!-- ko if: rsvpType() === 'evening' -->
+                <!-- ko if: rsvp.type() === 'evening' -->
                 <p>EVENING</p>
                 <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
-                <!-- /ko --> <!-- end if: rsvpType() == 'evening' -->
+                <!-- /ko --> <!-- end if: rsvp.type() == 'evening' -->
             </div>
         </section>
     </main>
