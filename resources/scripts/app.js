@@ -11,6 +11,7 @@ if(window.location.href.indexOf("rsvp") !== -1) {
         this.isChild = ko.observable(false);
         this.isVegetarian = ko.observable(false);
         this.allergies = ko.observable("");
+        this.favouriteSong = ko.observable("");
 
         this.firstName = ko.computed(() => {
             var spaceIndex = self.name().indexOf(" ") === -1 ? self.name().length : self.name().indexOf(" ");
@@ -36,22 +37,26 @@ if(window.location.href.indexOf("rsvp") !== -1) {
         this.allergyText = ko.computed(() => {
             return `Does ${self.firstName()} have any allergies?`;
         });
+
+        this.favouriteSongText = ko.computed(() => {
+            return `What song will get ${self.firstName()} dancing?`;
+        });
     };
 
     var viewModel = function() {
         var self = this;
 
-        this.isDayGuest = ko.observable();
+        this.rsvpType = ko.observable("");
         this.leadGuestEmail = ko.observable("");
 
         this.guests = ko.observableArray();
         this.guests.push(new guest());
 
-        this.setGuest = function(isDay) {
-            self.isDayGuest(isDay);
+        this.setRsvpType = (data, event) => {
+            self.rsvpType(event.currentTarget.id);
         }
 
-        this.addGuest = function() {
+        this.addGuest = () => {
             self.guests.push(new guest());
         }
 
@@ -59,7 +64,7 @@ if(window.location.href.indexOf("rsvp") !== -1) {
             self.guests.remove(guest);
         };
 
-        this.sendRsvp = function() {
+        this.sendRsvp = () => {
             var data = ko.toJSON(self);
             console.log(data);
         }

@@ -10,59 +10,24 @@
                 <h1>RSVP</h1>
                 <p>
                     Are you an all day guest?
-                    <button class="btn btn-default" data-bind="click: setGuest(true)">Yes</button>
-                    <button class="btn btn-default" data-bind="click: setGuest(false)">No</button>
+                    <button class="btn btn-default" id="day" data-bind="click: setRsvpType">Yes</button>
+                    <button class="btn btn-default" id="evening" data-bind="click: setRsvpType">No</button>
                 </p>
-                <!-- ko if: isDayGuest -->
+
+                <!-- ko if: rsvpType() === 'day' -->
                 <p>Please fill in the details on behalf of your whole party.</p>
+                <label for="leadGuestEmail" class="col-md-12">Contact email address</label>
                 <div class="col-md-12">
-                    <label for="leadGuestEmail" class="col-md-12">Contact email address</label>
-                    <div class="col-md-6">
-                        <input data-bind="value: leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
-                    </div>
+                    <input data-bind="value: leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
                 </div>
-                <div class="col-xs-12 guests spacer__bottom-2">
-                    <!-- ko foreach: guests -->
-                    <div class="card">
-                        <i class="remove-card" data-bind="click: $root.removeGuest">x</i>
-                        <h4 data-bind="text: 'Guest ' + ($index() + 1)"></h4>
-                        <div class="row spacer__bottom-2">
-                            <div class="col-md-4">
-                                <label data-bind="attr: {for: 'guestName' + $index()}" class="col-xs-12">Full Name</label>
-                                <input data-bind="textInput: name, id: 'guestName' + $index()" class="col-xs-12 form-control" type="text" />
-                            </div>
-                            <div class="col-md-3 col-xs-6 text-center">
-                                <label data-bind="attr: {for: 'guestIsAttending' + $index()}" class="col-xs-12">I'd love to come!</label>
-                                <input data-bind="checked: isAttending, id: 'guestIsAttending' + $index()" class="styled-checkbox" type="checkbox" />
-                            </div>
-                            <div class="col-md-3 col-xs-6 text-center">
-                                <label data-bind="attr: {for: 'guestIsNotAttending' + $index()}" class="col-xs-12">I can't make it :(</label>
-                                <input data-bind="checked: isNotAttending, id: 'guestIsNotAttending' + $index()" type="checkbox" />
-                            </div>
-                        </div>
-                        <div class="row" data-bind="visible: isAttending">
-                            <div class="col-md-4">
-                                <label data-bind="attr: {for: 'guestAllergies' + $index()}, text: allergyText" class="col-xs-12"></label>
-                                <input data-bind="value: allergies, id: 'guestAllergies' + $index()" class="col-xs-12 form-control" type="text" />
-                            </div>
-                            <div class="col-md-3 col-xs-6 text-center">
-                                <label data-bind="attr: {for: 'guestIsChild' + $index()}, text: isChildText" class="col-xs-12"></label>
-                                <input data-bind="checked: isChild, id: 'guestIsChild' + $index()" type="checkbox" />
-                            </div>
-                            <div class="col-md-3 col-xs-6 text-center spacer__bottom-2">
-                                <label data-bind="attr: {for: 'guestIsVeggie' + $index()}, text: isVeggieText" class="col-xs-12"></label>
-                                <input data-bind="checked: isVegetarian, id: 'guestIsVeggie' + $index()" type="checkbox" />
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /ko -->
-                    <button data-bind="click: addGuest" class="btn btn-info">Add another guest</button>
-                </div>
-                <!-- /ko -->
-                <!-- ko ifnot: isDayGuest -->
-                <p>EVENING</p>
-                <!-- /ko -->
+                @@include('guests.html')
                 <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
+                <!-- /ko --> <!-- end if: rsvpType() == 'day' -->
+
+                <!-- ko if: rsvpType() === 'evening' -->
+                <p>EVENING</p>
+                <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
+                <!-- /ko --> <!-- end if: rsvpType() == 'evening' -->
             </div>
         </section>
     </main>
