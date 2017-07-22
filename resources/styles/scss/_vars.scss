@@ -1,5 +1,7 @@
 $color-background: #e9e9e9;
 $color-font: #2d3133;
 $color-primary: #2d3e50;
+$color-primary-dark: darken($color-primary, 10%);
 $color-primary-accent: #1bbc9b;
+$color-primary-accent-dark: darken($color-primary-accent, 10%);
 $color-secondary-accent: #e64c66;

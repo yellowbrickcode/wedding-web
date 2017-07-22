@@ -1,0 +1,53 @@
+.btn-info {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover, &:focus, &:active {
+        background-color: $color-primary-dark;
+        border-color: $color-primary-dark;
+    }
+}
+
+.btn-primary {
+    background-color: $color-primary-accent;
+    border-color: $color-primary-accent;
+
+    &:hover, &:focus, &:active {
+        background-color: $color-primary-accent-dark;
+        border-color: $color-primary-accent-dark;
+    }
+}
+
+.guests {
+    label {
+        padding-left: 0;
+    }
+
+    input[type=checkbox] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
+
+.card {
+    background-color: white;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.remove-card {
+    color: $color-secondary-accent;
+    cursor: pointer;
+    float: right;
+    font-style: normal;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -0.7em;
+    margin-right: -0.2em;
+}

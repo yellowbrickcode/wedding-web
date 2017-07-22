@@ -11,7 +11,7 @@ module.exports = {
 				debug: true
 			},
 			transform: [['babelify']],
-			plugin: ['minifyify']
+			//plugin: ['minifyify']
 		}
 	}
 };
