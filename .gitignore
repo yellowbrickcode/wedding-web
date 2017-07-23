@@ -1,6 +1,11 @@
 # Directory of public site
 public
+
+# VSCode Settings Directory
 .vscode
+
+# Config file
+resources/scripts/Config.js
 
 # Logs
 logs

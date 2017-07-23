@@ -1,7 +1,8 @@
+var $ = require("jquery");
 var ko = require("knockout");
 var Guest = require("./Guest");
 var Rsvp = require("./Rsvp");
-var $ = require("jquery");
+var Config = require("./Config");
 
 module.exports = function() {
     var self = this;
@@ -32,7 +33,13 @@ module.exports = function() {
 
     this.sendRsvp = () => {
         var data = ko.toJSON(self.rsvp);
-
-        // TODO: Function link is sensitive info. Can't put this in source control...
+        
+        $.post(Config.functionUrl, data)
+        .done(() => {
+            self.result("success");
+        })
+        .fail((error) => {
+            self.result("failed");
+        });
     }
 };
