@@ -26,6 +26,7 @@
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-browserify": "^5.0.0",
+    "grunt-cache-busting": "0.0.11",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-include-replace": "^5.0.0",
