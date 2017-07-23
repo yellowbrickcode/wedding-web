@@ -12,6 +12,11 @@
     background-color: $color-primary-accent;
     border-color: $color-primary-accent;
 
+    &[disabled]:hover {
+        background-color: $color-primary-accent-dark;
+        border-color: $color-primary-accent-dark;
+    }
+
     &:hover, &:focus, &:active {
         background-color: $color-primary-accent-dark;
         border-color: $color-primary-accent-dark;
