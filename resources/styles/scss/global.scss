@@ -35,6 +35,18 @@ img {
     border-radius: 2px;
 }
 
+input, textarea {
+    font-size: 16px !important; // This stops iOS doing that horrible auto zoom on focus
+
+    &:focus {
+        font-size: 16px;
+    }
+}
+
+input[type=checkbox] {
+    height: 1.2em;
+}
+
 .img-center {
     margin-left: auto;
     margin-right: auto;
