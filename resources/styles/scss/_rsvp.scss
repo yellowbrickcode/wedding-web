@@ -23,24 +23,13 @@
     }
 }
 
+label[for=leadGuestEmail] {
+    padding-left: 0;
+}
+
 .guests {
     label {
         padding-left: 0;
-    }
-
-    input[type=checkbox] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 1.5em;
-        width: 1.5em;
-    }
-}
-
-.rsvp-accommodation {
-    input[type=checkbox] {
-        height: 1.5em;
-        width: 1.5em;
     }
 }
 

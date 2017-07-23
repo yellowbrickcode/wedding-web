@@ -1,41 +1,41 @@
-<div class="col-xs-12 guests spacer__bottom-2">
+<div class="guests spacer__bottom-2">
     <!-- ko foreach: rsvp.guests -->
-    <div class="card">
+    <div class="card col-xs-12">
         <i class="remove-card" data-bind="click: $root.removeGuest">x</i>
         <h4 data-bind="text: 'Guest ' + ($index() + 1)"></h4>
         <div class="row spacer__bottom-2">
             <div class="col-md-4">
                 <label data-bind="attr: {for: 'guestName' + $index()}" class="col-xs-12">Full Name</label>
-                <input data-bind="textInput: name, id: 'guestName' + $index()" class="col-xs-12 form-control" type="text" />
+                <input data-bind="textInput: name, attr: {id: 'guestName' + $index()}" class="form-control" type="text" />
             </div>
-            <div class="col-md-3 col-xs-6 text-center">
-                <label data-bind="attr: {for: 'guestIsAttending' + $index()}" class="col-xs-12">I'd love to come!</label>
-                <input data-bind="checked: isAttending, id: 'guestIsAttending' + $index()" class="styled-checkbox" type="checkbox" />
+            <div class="col-md-3 col-xs-12">
+                <label data-bind="attr: {for: 'guestIsAttending' + $index()}" class="col-md-12 col-xs-6">I'd love to come!</label>
+                <input data-bind="checked: isAttending, attr: {id: 'guestIsAttending' + $index()}" class="col-xs-6" type="checkbox" />
             </div>
-            <div class="col-md-3 col-xs-6 text-center">
-                <label data-bind="attr: {for: 'guestIsNotAttending' + $index()}" class="col-xs-12">I can't make it :(</label>
-                <input data-bind="checked: isNotAttending, id: 'guestIsNotAttending' + $index()" type="checkbox" />
+            <div class="col-md-3 col-xs-12">
+                <label data-bind="attr: {for: 'guestIsNotAttending' + $index()}" class="col-md-12 col-xs-6">I can't make it :(</label>
+                <input data-bind="checked: isNotAttending, attr: {id: 'guestIsNotAttending' + $index()}" class="col-xs-6" type="checkbox" />
             </div>
         </div>
         <!-- ko if: isAttending -->
         <div class="row spacer__bottom-2">
             <div class="col-md-4">
                 <label data-bind="attr: {for: 'guestAllergies' + $index()}, text: allergyText" class="col-xs-12"></label>
-                <input data-bind="value: allergies, id: 'guestAllergies' + $index()" class="col-xs-12 form-control" type="text" />
+                <input data-bind="value: allergies, attr: {id: 'guestAllergies' + $index()}" class="form-control" type="text" />
             </div>
-            <div class="col-md-3 col-xs-6 text-center">
-                <label data-bind="attr: {for: 'guestIsChild' + $index()}, text: isChildText" class="col-xs-12"></label>
-                <input data-bind="checked: isChild, id: 'guestIsChild' + $index()" type="checkbox" />
+            <div class="col-md-3 col-xs-12">
+                <label data-bind="attr: {for: 'guestIsChild' + $index()}, text: isChildText" class="col-md-12 col-xs-6"></label>
+                <input data-bind="checked: isChild, attr: {id: 'guestIsChild' + $index()}" class="col-xs-6" type="checkbox" />
             </div>
-            <div class="col-md-3 col-xs-6 text-center">
-                <label data-bind="attr: {for: 'guestIsVeggie' + $index()}, text: isVeggieText" class="col-xs-12"></label>
-                <input data-bind="checked: isVegetarian, id: 'guestIsVeggie' + $index()" type="checkbox" />
+            <div class="col-md-3 col-xs-12">
+                <label data-bind="attr: {for: 'guestIsVeggie' + $index()}, text: isVeggieText" class="col-md-12 col-xs-6"></label>
+                <input data-bind="checked: isVegetarian, attr: {id: 'guestIsVeggie' + $index()}" class="col-xs-6" type="checkbox" />
             </div>
         </div>
         <div class="row spacer__bottom-2">
             <div class="col-md-4">
                 <label data-bind="attr: {for: 'guestFaveSong' + $index()}, text: favouriteSongText" class="col-xs-12"></label>
-                <input data-bind="value: favouriteSong, id: 'guestFaveSong' + $index()" class="col-xs-12 form-control" type="text" />
+                <input data-bind="value: favouriteSong, attr: {id: 'guestFaveSong' + $index()}" class="form-control" type="text" />
             </div>
         </div>
         <!-- /ko --> <!-- end if: isAttending -->

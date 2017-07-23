@@ -16,8 +16,8 @@
                 
                 <!-- ko ifnot: rsvp.type() === '' -->
                 <p>Please fill in the details on behalf of your whole party.</p>
-                <label for="leadGuestEmail" class="col-md-12">Contact email address</label>
-                <div class="col-md-12">
+                <div>
+                    <label for="leadGuestEmail" class="col-md-12">Contact email address</label>
                     <input data-bind="value: rsvp.leadGuestEmail" type="email" class="form-control" id="leadGuestEmail" />
                 </div>
                 @@include('guests.html')
