@@ -25,16 +25,22 @@
                 <!-- /ko --> <!-- end if: rsvp.type() == 'day' -->
                 <!-- ko if: result() === 'failed' -->
                 <div class="col-xs-12 alert alert-danger spacer__bottom-2" role="alert">
-                    Oops, there's been a problem and we probably haven't got your information. Please check your details and try again. 
-                    If you keep having issues, get in touch with one of us.
+                    Oops, there's been a problem and we probably haven't received your information. Please check your details 
+                    and try again. If you keep having issues, get in touch with one of us.
                 </div>
                 <!-- /ko --> <!-- end if: result() === 'failed' -->
                 <!-- ko ifnot: result() === 'success' -->
-                <button data-bind="click: sendRsvp" class="btn btn-primary btn-lg">Send RSVP</button>
+                <p>
+                    <b>Please just confirm you are human and enter in the box below, the name of the band who won 
+                    the Eurovision Song Contest with the song Waterloo. With the correct answer the button to send your 
+                    RSVP will appear!</b>
+                </p>
+                <input data-bind="textInput: answer" type="text" class="form-control spacer__bottom-1" />
+                <button data-bind="click: sendRsvp, visible: isHuman" class="btn btn-primary btn-lg">Send RSVP</button>
                 <!-- /ko --> <!-- end ifnot: result() === 'success' -->
                 <!-- ko if: result() === 'success' -->
                 <div class="col-xs-12 alert alert-success" role="alert">
-                    Thanks so much so sending us your RSVP information. We've received this and will be in touch soon.
+                    Thanks so much for sending us your RSVP information. We've received this and will be in touch soon.
                 </div>
                 <!-- /ko --> <!-- end if: result() === 'success' -->
                 <!-- /ko --> <!-- end ifnot: rsvp.type() === '' -->

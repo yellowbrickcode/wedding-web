@@ -8,7 +8,15 @@ module.exports = function() {
 
     this.rsvp = new Rsvp();
 
+    this.answer = ko.observable("");
     this.result = ko.observable("");
+
+    this.isHuman = ko.computed(() => {
+        if(self.answer().toLowerCase() === "abba") {
+            return true;
+        }
+        return false;
+    }, self);
 
     this.setRsvpType = (data, event) => {
         self.rsvp.type(event.currentTarget.id);
@@ -24,8 +32,7 @@ module.exports = function() {
 
     this.sendRsvp = () => {
         var data = ko.toJSON(self.rsvp);
-        console.log(data);
 
-        self.result("success");
+        // TODO: Function link is sensitive info. Can't put this in source control...
     }
 };
